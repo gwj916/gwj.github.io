@@ -180,7 +180,7 @@
       <link href="/article/b80b3d75.html"/>
       <url>/article/b80b3d75.html</url>
       
-        <content type="html"><![CDATA[<h2 id="认识webpack"><a href="#认识webpack" class="headerlink" title="认识webpack"></a>认识webpack</h2><p>从本质上来讲, webpack是一个现代的 JavaScript 应用的静态模块打包工具模块 和 打包</p><h3 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h3><p>在ES6之前, 我们想要进行模块化开发, 就必须借助于其他的工具, 让我们可以进行模块化开发</p><p>并且再通过模块化开发完成了项目后, 还需要处理模块间的各种依赖, 并且将其进行整合打包</p><p>而 webpack 其中一个核心就是让我们可能进行模块化开发, 并且会帮助我们处理模块间的依赖关系</p><p>而且不仅仅是 JavaScript 文件, 我们的 CSS、图片、json文件等等在webpack中都可以被当作模块来舒勇</p><p>这就是 webpack 中模块化的概念<br><img src="/public/img/Webpack1.png"></p><h3 id="打包如何理解呢？"><a href="#打包如何理解呢？" class="headerlink" title="打包如何理解呢？"></a>打包如何理解呢？</h3><p>理解了webpack 可以帮助我们进行模块化， 并且处理模块间的各种复杂关系后，打包的概念就非常好理解了</p><p>就是讲 webpack中的各种资源块进行打包合并成一个或多个包 （bundle）</p><p>并且在打包的过程中, 还可以对资源进行处理,</p><p>比如压缩图片, 将scss 转成 css , 将ES6 语法转成 ES5 语法, 将 TypeScript 转成 JavaScript 等等操作</p><h3 id="2-webpack安装"><a href="#2-webpack安装" class="headerlink" title="2.webpack安装"></a>2.webpack安装</h3><p>安装webpack 首先需要安装 Node.js , Node.js 自带了软件包管理工具 npm</p><p>查看自己的node版本:</p><pre class=" language-shell"><code class="language-shell">npm -v</code></pre><p>局部安装 webpack</p><pre class=" language-shell"><code class="language-shell">npm install webpack@3.6.0 --save-dev</code></pre><p>在终端直接执行 webpack命令, 使用的是全局安装的webpack<br>当在package,json中定义了script时, 其中包含了webpack命令, 那么使用的是局部webpack</p><h3 id="创建如下文件和文件夹"><a href="#创建如下文件和文件夹" class="headerlink" title="创建如下文件和文件夹:"></a>创建如下文件和文件夹:</h3><p>文件和文件夹解析:<br>dist 文件夹: 用于存放打包之后的文件</p><p>src 文件夹: 用于存放我们写的源文件</p><p>main.js : 项目的入口文件<br>mathUtils.js 定义了一些数学更具函数, 可以在其他地方引用, 并且使用<br>index.html : 浏览器打开展示的首页 html<br>package.json: 通过npn init 生成的 npm包管理的文件 </p><h3 id="打包js-文件"><a href="#打包js-文件" class="headerlink" title="打包js 文件"></a>打包js 文件</h3><p>现在的js文件中使用了模块化的方式进行开发，他们可以直接使用吗？不可以。</p><p>因为如果直接在index.html引入这两个js文件，浏览器并不识别其中的模块化代码。<br>另外，在真实项目中当有许多这样的js文件时，我们一个个引用非常麻烦，并且后期非常不方便对它们进行管理。<br>如何打包呢？使用webpack的指令即可</p><pre class=" language-shell"><code class="language-shell">webpack src/main.js dist/bundle.js</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="认识webpack"><a href="#认识webpack" class="headerlink" title="认识webpack"></a>认识webpack</h2><p>从本质上来讲, webpack是一个现代的 JavaScript 应用的静态模块打包工具模块 和 打包</p><h3 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h3><p>在ES6之前, 我们想要进行模块化开发, 就必须借助于其他的工具, 让我们可以进行模块化开发</p><p>并且再通过模块化开发完成了项目后, 还需要处理模块间的各种依赖, 并且将其进行整合打包</p><p>而 webpack 其中一个核心就是让我们可能进行模块化开发, 并且会帮助我们处理模块间的依赖关系</p><p>而且不仅仅是 JavaScript 文件, 我们的 CSS、图片、json文件等等在webpack中都可以被当作模块来舒勇</p><p>这就是 webpack 中模块化的概念<br><img src="/imgs/webpack1.png"></p><h3 id="打包如何理解呢？"><a href="#打包如何理解呢？" class="headerlink" title="打包如何理解呢？"></a>打包如何理解呢？</h3><p>理解了webpack 可以帮助我们进行模块化， 并且处理模块间的各种复杂关系后，打包的概念就非常好理解了</p><p>就是讲 webpack中的各种资源块进行打包合并成一个或多个包 （bundle）</p><p>并且在打包的过程中, 还可以对资源进行处理,</p><p>比如压缩图片, 将scss 转成 css , 将ES6 语法转成 ES5 语法, 将 TypeScript 转成 JavaScript 等等操作</p><h3 id="2-webpack安装"><a href="#2-webpack安装" class="headerlink" title="2.webpack安装"></a>2.webpack安装</h3><p>安装webpack 首先需要安装 Node.js , Node.js 自带了软件包管理工具 npm</p><p>查看自己的node版本:</p><pre class=" language-shell"><code class="language-shell">npm -v</code></pre><p>局部安装 webpack</p><pre class=" language-shell"><code class="language-shell">npm install webpack@3.6.0 --save-dev</code></pre><p>在终端直接执行 webpack命令, 使用的是全局安装的webpack<br>当在package,json中定义了script时, 其中包含了webpack命令, 那么使用的是局部webpack</p><h3 id="创建如下文件和文件夹"><a href="#创建如下文件和文件夹" class="headerlink" title="创建如下文件和文件夹:"></a>创建如下文件和文件夹:</h3><p>文件和文件夹解析:<br>dist 文件夹: 用于存放打包之后的文件</p><p>src 文件夹: 用于存放我们写的源文件</p><p>main.js : 项目的入口文件<br>mathUtils.js 定义了一些数学更具函数, 可以在其他地方引用, 并且使用<br>index.html : 浏览器打开展示的首页 html<br>package.json: 通过npn init 生成的 npm包管理的文件 </p><h3 id="打包js-文件"><a href="#打包js-文件" class="headerlink" title="打包js 文件"></a>打包js 文件</h3><p>现在的js文件中使用了模块化的方式进行开发，他们可以直接使用吗？不可以。</p><p>因为如果直接在index.html引入这两个js文件，浏览器并不识别其中的模块化代码。<br>另外，在真实项目中当有许多这样的js文件时，我们一个个引用非常麻烦，并且后期非常不方便对它们进行管理。<br>如何打包呢？使用webpack的指令即可</p><pre class=" language-shell"><code class="language-shell">webpack src/main.js dist/bundle.js</code></pre>]]></content>
       
       
       <categories>
@@ -194,9 +194,9 @@
       
         <tags>
             
-            <tag> 构建工具 </tag>
-            
             <tag> Webpack </tag>
+            
+            <tag> 构建工具 </tag>
             
         </tags>
       
@@ -252,9 +252,9 @@
       
         <tags>
             
-            <tag> Vite </tag>
-            
             <tag> 构建工具 </tag>
+            
+            <tag> Vite </tag>
             
         </tags>
       
